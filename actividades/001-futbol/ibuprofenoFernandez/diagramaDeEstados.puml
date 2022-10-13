@@ -11,7 +11,6 @@ State Partido {
     EnJuego --> Detenido
     Detenido --> Saque  
   }
-
   Inicio --> Saque
 }
 
