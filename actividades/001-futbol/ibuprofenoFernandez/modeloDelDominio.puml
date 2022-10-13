@@ -6,13 +6,13 @@ Alineación --> Partido : Disputa >
 
 Equipo --> Alineación : Presenta >
 
-Arbitro --> Partido : Dirige >
+Árbitro --> Partido : Dirige >
 
 Jugador --> Equipo : Pertenece >
 
 Partido --> Reglas : Sigue >
 
-Persona <|-- Arbitro
+Persona <|-- Árbitro
 Persona <|-- Jugador
 
 @enduml
