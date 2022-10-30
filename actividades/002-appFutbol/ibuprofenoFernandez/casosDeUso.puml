@@ -1,0 +1,31 @@
+@startuml
+left to right direction
+
+actor Administrador
+usecase CrearJugador
+usecase CrearEquipo
+
+Administrador ---> CrearEquipo
+Administrador ---> CrearJugador
+
+package Partido {
+
+  usecase CrearPartido
+  usecase CrearAlineacion
+  Administrador --> CrearPartido
+  Administrador --> CrearAlineacion
+
+  package Encuentro {
+    actor Relator
+    usecase CrearEncuentro
+    usecase EditarEncuentro
+    usecase AgregarPeriodo
+
+    Relator --> CrearEncuentro
+    Relator --> EditarEncuentro
+    Relator --> AgregarPeriodo
+
+  }
+}
+
+@enduml
