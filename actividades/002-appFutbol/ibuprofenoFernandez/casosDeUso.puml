@@ -2,30 +2,39 @@
 left to right direction
 
 actor Administrador
-usecase CrearJugador
-usecase CrearEquipo
+usecase InscribirJugador
+usecase InscribirEquipo
 
-Administrador ---> CrearEquipo
-Administrador ---> CrearJugador
+Administrador ---> InscribirEquipo
+Administrador ---> InscribirJugador
+
 
 package Partido {
 
-  usecase CrearPartido
-  usecase CrearAlineacion
-  Administrador --> CrearPartido
-  Administrador --> CrearAlineacion
+usecase CrearPartido
+usecase DefinirAlineacion
+Administrador --> CrearPartido
+Administrador --> DefinirAlineacion
 
-  package Encuentro {
-    actor Relator
-    usecase CrearEncuentro
-    usecase EditarEncuentro
-    usecase AgregarPeriodo
 
-    Relator --> CrearEncuentro
-    Relator --> EditarEncuentro
-    Relator --> AgregarPeriodo
+package Encuentro {
 
-  }
+actor Relator
+usecase CrearEncuentro
+
+Relator --> CrearEncuentro
+
+package Periodo {
+usecase AñadirPeriodo
+useCase AgregarOcurrencia
+
+Relator --> AñadirPeriodo
+Relator --> AgregarOcurrencia
+
+}
+
+}
+
 }
 
 @enduml
