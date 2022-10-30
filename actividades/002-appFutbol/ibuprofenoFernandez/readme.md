@@ -1,3 +1,20 @@
+# Actores y Casos de uso
+
+## Actores
+
+<div align="center">
+
+|Actor|Descripción
+|-|-
+|**Administrador**|Configura la liga
+|**Configurador**|Prepara el partido
+|**Relator**|Encargado de ingresar las ocurrencias del partido
+|**Observador**|Ve el relato
+
+</div>
+
+## Casos de Uso
+
 <div align="center">
 
 |Casos de Uso :nut_and_bolt: :hammer:
