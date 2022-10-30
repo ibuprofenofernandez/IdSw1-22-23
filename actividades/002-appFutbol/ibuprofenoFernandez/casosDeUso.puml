@@ -3,14 +3,6 @@ left to right direction
 
 package Liga {
 
-    actor Administrador    
-
-    usecase InscribirJugador
-    usecase InscribirEquipo
-
-    Administrador ---> InscribirEquipo
-    Administrador ---> InscribirJugador
-
     package Partido {
 
         actor Configurador
@@ -37,10 +29,25 @@ package Liga {
                 Relator --> AgregarOcurrencia
 
             }
-
         }
-
     }
+
+    actor Administrador    
+
+    usecase InscribirJugador
+    usecase InscribirEquipo
+
+    usecase ListarLigas
+    usecase CrearLiga
+
+    Administrador ---> InscribirEquipo
+    Administrador ---> InscribirJugador
+
+
+    Administrador --> CrearLiga
+    Administrador -u-> ListarLigas
+    Relator -u-> ListarLigas
+    Configurador -u-> ListarLigas
 }
 
 @enduml
