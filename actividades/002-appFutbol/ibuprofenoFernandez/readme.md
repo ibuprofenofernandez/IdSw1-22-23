@@ -1,25 +1,7 @@
-# Actores y Casos de uso
+# Disciplina de requisitos
 
-## Actores
-
-<div align="center">
-
-|Actor|Descripción
-|-|-
-|**Administrador**|Configura la liga
-|**Configurador**|Prepara el partido
-|**Relator**|Encargado de ingresar las ocurrencias del partido
-|**Observador**|Ve el relato
-
-</div>
-
-## Casos de Uso
-
-<div align="center">
-
-|Casos de Uso :nut_and_bolt: :hammer:
-|:-:
-|![](images/casosDeUso.png)
-|[Código](casosDeUso.puml)
-
-</div>
+1. [Encontrar actores y casos de uso](001-EncontrarActoresYCasosDeUso.md)
+1. [Priorizar casos de uso](002-PriorizarCasosDeUso.md)
+1. [Detallar casos de Uso](003-DetallarCasosDeUso.md)
+1. [Prototipar casos de uso](004-PrototipadCasosDeUso.md)
+1. [Estructurar casos de uso](005-EstructurarCasosDeUso.md)
