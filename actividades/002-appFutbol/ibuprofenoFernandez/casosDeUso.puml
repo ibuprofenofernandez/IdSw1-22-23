@@ -1,40 +1,46 @@
 @startuml
 left to right direction
 
-actor Administrador
-usecase InscribirJugador
-usecase InscribirEquipo
+package Liga {
 
-Administrador ---> InscribirEquipo
-Administrador ---> InscribirJugador
+    actor Administrador    
+
+    usecase InscribirJugador
+    usecase InscribirEquipo
+
+    Administrador ---> InscribirEquipo
+    Administrador ---> InscribirJugador
+
+    package Partido {
+
+        actor Configurador
+
+        usecase CrearPartido
+        usecase DefinirAlineacion
+
+        Configurador --> CrearPartido
+        Configurador --> DefinirAlineacion
 
 
-package Partido {
+        package Encuentro {
 
-usecase CrearPartido
-usecase DefinirAlineacion
-Administrador --> CrearPartido
-Administrador --> DefinirAlineacion
+            actor Relator
+            usecase CrearEncuentro
 
+            Relator --> CrearEncuentro
 
-package Encuentro {
+            package Periodo {
+                usecase AñadirPeriodo
+                useCase AgregarOcurrencia
 
-actor Relator
-usecase CrearEncuentro
+                Relator --> AñadirPeriodo
+                Relator --> AgregarOcurrencia
 
-Relator --> CrearEncuentro
+            }
 
-package Periodo {
-usecase AñadirPeriodo
-useCase AgregarOcurrencia
+        }
 
-Relator --> AñadirPeriodo
-Relator --> AgregarOcurrencia
-
-}
-
-}
-
+    }
 }
 
 @enduml
