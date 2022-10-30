@@ -1,0 +1,21 @@
+@startuml
+
+' state verificaLiga <<choice>>
+
+state NONAME_LIGAS as " "
+state NONAME_EQUIPOS as " "
+state NONAME_EQUIPO as " "
+
+[*] --> Inicio 
+
+Inicio --> NONAME_LIGAS : ListarLigas
+NONAME_LIGAS --> LigaAbierta : AbrirLiga \n ListarEquipos
+NONAME_LIGAS --> NONAME_LIGAS : CrearLiga
+
+LigaAbierta -r-> NONAME_EQUIPOS : AsociarEquipos
+NONAME_EQUIPOS --> LigaAbierta : AbrirLiga \n ListarEquipos
+
+LigaAbierta -l-> NONAME_EQUIPO : CrearEquipo
+NONAME_EQUIPO --> LigaAbierta : AbrirLiga \n ListarEquipos
+
+@enduml

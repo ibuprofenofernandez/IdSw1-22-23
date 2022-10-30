@@ -23,3 +23,14 @@
 |[Código](casosDeUso.puml)
 
 </div>
+
+## Diagrama de contexto
+
+<div align="center">
+
+|Diagrama de contexto :nut_and_bolt: :hammer:
+|:-:
+|![](images/diagramaContexto.png)
+|[Código](diagramaContexto.puml)
+
+</div>
